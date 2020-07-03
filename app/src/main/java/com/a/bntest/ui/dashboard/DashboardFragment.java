@@ -19,7 +19,8 @@ public class DashboardFragment extends Fragment {
     
     public View onCreateView(
             @NonNull LayoutInflater inflater,
-            ViewGroup container, Bundle savedInstanceState
+            ViewGroup container,
+            Bundle savedInstanceState
     ) {
         dashboardViewModel =
                 ViewModelProviders.of(this).get(DashboardViewModel.class);
