@@ -25,7 +25,7 @@ public class SecondFragment extends Fragment {
     ) {
         viewModel = ViewModelProviders.of(this).get(FirstViewModel.class);
         root = inflater.inflate(R.layout.fragment_first, container, false);
-        final Button button = root.findViewById(R.id.btnFirst);
+        final Button button = root.findViewById(R.id.btnSecond);
         viewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
