@@ -1,15 +1,15 @@
-package com.a.bntest.ui.notifications;
+package com.a.bntest.ui.first;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class NotificationsViewModel extends ViewModel {
+public class FirstViewModel extends ViewModel {
     private MutableLiveData<String> mText;
     
-    public NotificationsViewModel() {
+    public FirstViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is notifications fragment");
+        mText.setValue("first fragment");
     }
     
     public LiveData<String> getText() {

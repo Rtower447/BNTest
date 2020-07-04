@@ -1,9 +1,10 @@
-package com.a.bntest.ui.home;
+package com.a.bntest.ui.first;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -14,21 +15,21 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.a.bntest.R;
 
-public class HomeFragment extends Fragment {
-    private HomeViewModel homeViewModel;
+public class FirstFragment extends Fragment {
+    private FirstViewModel viewModel;
+    private View root;
     
     public View onCreateView(
             @NonNull LayoutInflater inflater,
             ViewGroup container, Bundle savedInstanceState
     ) {
-        homeViewModel =
-                ViewModelProviders.of(this).get(HomeViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_home, container, false);
-        final TextView textView = root.findViewById(R.id.text_home);
-        homeViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+        viewModel = ViewModelProviders.of(this).get(FirstViewModel.class);
+        root = inflater.inflate(R.layout.fragment_first, container, false);
+        final Button button = root.findViewById(R.id.btnFirst);
+        viewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
-                textView.setText(s);
+                button.setText(s);
             }
         });
         return root;
