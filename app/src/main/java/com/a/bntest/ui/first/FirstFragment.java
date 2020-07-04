@@ -23,15 +23,16 @@ public class FirstFragment extends Fragment {
             @NonNull LayoutInflater inflater,
             ViewGroup container, Bundle savedInstanceState
     ) {
-        viewModel = ViewModelProviders.of(this).get(FirstViewModel.class);
         root = inflater.inflate(R.layout.fragment_first, container, false);
-        final Button button = root.findViewById(R.id.btnFirst);
-        viewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                button.setText(s);
-            }
-        });
+        //
+//        viewModel = ViewModelProviders.of(this).get(FirstViewModel.class);
+//        final Button button = root.findViewById(R.id.btnFirst);
+//        viewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+//            @Override
+//            public void onChanged(@Nullable String s) {
+//                button.setText(s);
+//            }
+//        });
         return root;
     }
 }
