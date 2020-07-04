@@ -8,13 +8,13 @@
     <fragment
         android:id="@+id/navigation_first"
         android:name="com.a.bntest.ui.first.FirstFragment"
-        android:label="First"
+        android:label="First Nav"
         tools:layout="@layout/fragment_first" />
 
     <fragment
         android:id="@+id/navigation_second"
         android:name="com.a.bntest.ui.second.SecondFragment"
-        android:label="Second"
+        android:label="Second Nav"
         tools:layout="@layout/fragment_second" />
 
 </navigation>
